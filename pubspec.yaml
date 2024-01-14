@@ -23,6 +23,8 @@ dependencies:
   google_maps_flutter: ^2.5.2
   # To convert Lat/Long into Address
   flutter_geocoder: ^0.2.2-nullsafety
+  # To get users current location
+  geolocator: ^10.1.0
 
 dev_dependencies:
   flutter_test:
