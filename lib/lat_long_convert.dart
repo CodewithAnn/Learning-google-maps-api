@@ -27,16 +27,17 @@ class _LatLongToAddState extends State<LatLongToAdd> {
                   .findAddressesFromCoordinates(_coordinate);
               var first = _address.first;
 
-              print("Address :" +
-                  first.featureName.toString() +
+              print("Address : " +
+                  // first.featureName.toString() +
                   "" +
                   first.addressLine.toString());
 
               // For Convert to coordinate from address(address to Lat/Long)
-              // final query = "Hochschulstraße 1, 83024 Rosenheim, Germany";
-              // var _coordinates =
-              //     await Geocoder.local.findAddressesFromQuery(query);
-              // var latLong = _coordinates.first;
+              final query = "Hochschulstraße 1, 83024 Rosenheim, Germany";
+              var _coordinates =
+                  await Geocoder.local.findAddressesFromQuery(query);
+              var latLong = _coordinates.first;
+              print("Lat/Long : " + _coordinates.first.coordinates.toString());
             },
             child: Text("Convert")),
       )),
