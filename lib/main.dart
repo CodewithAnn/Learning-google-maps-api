@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_api/home_Page.dart';
 import 'package:google_maps_api/lat_long_convert.dart';
+import 'package:google_maps_api/user_current_location.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LatLongToAdd(),
+      home: const UserCurrentLocation(),
     );
   }
 }
