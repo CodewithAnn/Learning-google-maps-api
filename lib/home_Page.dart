@@ -29,7 +29,12 @@ class _HomePageState extends State<HomePage> {
       markerId: MarkerId("2"),
       position: LatLng(28.744176178567297, 77.1179789742538),
       infoWindow: InfoWindow(title: "DTU Cafe"),
-    )
+    ),
+    const Marker(
+      markerId: MarkerId("3"),
+      position: LatLng(28.744176178567297, 77.1179789742538),
+      infoWindow: InfoWindow(title: "TH Rosenheim"),
+    ),
   ];
 
   @override
@@ -55,6 +60,21 @@ class _HomePageState extends State<HomePage> {
           },
           markers: Set<Marker>.of(_marker),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async {
+          GoogleMapController controller = await _controller.future;
+          controller.animateCamera(
+            CameraUpdate.newCameraPosition(
+             const CameraPosition(
+                target: LatLng(47.86756256632046, 12.10717229814699),
+                zoom: 14,
+              ),
+            ),
+          );
+          
+        },
+        child: Icon(Icons.location_on_outlined),
       ),
     );
   }
