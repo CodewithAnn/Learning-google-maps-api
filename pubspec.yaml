@@ -25,6 +25,9 @@ dependencies:
   flutter_geocoder: ^0.2.2-nullsafety
   # To get users current location
   geolocator: ^10.1.0
+  http: ^1.1.2
+  # to genrate Unique id
+  uuid: ^4.3.3
 
 dev_dependencies:
   flutter_test:
