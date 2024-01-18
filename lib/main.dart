@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_api/home_Page.dart';
 import 'package:google_maps_api/lat_long_convert.dart';
+import 'package:google_maps_api/places_api_screen.dart';
 import 'package:google_maps_api/user_current_location.dart';
 
 void main() {
@@ -14,12 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const UserCurrentLocation(),
+      home: const PlacesApiScreen(),
     );
   }
 }
